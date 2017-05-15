@@ -1,10 +1,16 @@
 {
-  "name": "starterKit",
+  "name": "starter-kit",
   "version": "1.0.0",
   "description": "JS dev envi",
   "main": "index.js",
   "author": "Brahim Sourny",
   "license": "MIT",
+	"scripts": {
+		"prestart": "node scripts/serverMessage.js",
+		"start": "node scripts/server.js",
+		"security-check": "nsp chech",
+		"share": "lt --port 3000"
+	},
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
