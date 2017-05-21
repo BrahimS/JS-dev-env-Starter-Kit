@@ -13,6 +13,17 @@ app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath
 }));
 
+// endpoint that serve data
+app.get('/users', function(req, res) {
+  res.json([
+    {"id":1, "name": "Brahim","age": 40, "eamil": "brahim@gmail.com" },
+    {"id":2, "name": "Sabine","age": 37, "eamil": "sabine@gmail.com" },
+    {"id":3, "name": "Sophia","age": 4, "eamil": "sophia@gmail.com" },
+    {"id":4, "name": "Gabriel","age": 2, "eamil": "gabriel@gmail.com" },
+    {"id":5, "name": "Anouk","age": 0.3, "eamil": "anouk@gmail.com" }
+  ]);
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
