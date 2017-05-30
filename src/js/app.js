@@ -7,5 +7,5 @@ console.log(add(14, 20));
 export default   add;
 
 /* eslint-disable no-console */
-console.log (name);
+console.log   (name);
 
